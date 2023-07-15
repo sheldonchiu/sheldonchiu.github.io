@@ -9,30 +9,46 @@
 </head>
 <body>
   <div class="container mt-3">
-    <h1>Prmopt Tool For <a href="https://github.com/microsoft/unilm/tree/master/kosmos-2" target="_blank" rel="noopener noreferrer">Kosmos 2</a></h1>
-    <div class="row">
-      <div class="col-12 col-lg-4">
-        <div class="mb-3">
-          <label for="p-input" class="form-label">P (Keep default is fine):</label>
-          <input type="number" id="p-input" class="form-control" value="32">
+    <header>
+      <h1>Prmopt Tool For <a href="https://github.com/microsoft/unilm/tree/master/kosmos-2" target="_blank" rel="noopener noreferrer">Kosmos 2</a></h1>
+    </header>
+    <nav>
+      <!-- Add navigation links here -->
+    </nav>
+    <main>
+      <article>
+        <div class="row">
+          <div class="col-12 col-lg-4">
+            <div class="mb-3">
+              <label for="p-input" class="form-label">P (Keep default is fine):</label>
+              <input type="number" id="p-input" class="form-control" value="32">
+            </div>
+            <div class="mb-3">
+              <label for="phrase-input" class="form-label">Phrase:</label>
+              <input type="text" id="phrase-input" class="form-control" value="">
+            </div>
+            <div class="mb-3">
+              <label for="image-input" class="form-label">Upload Image:</label>
+              <input type="file" id="image-input" class="form-control" accept="image/*" />
+            </div>
+            <button id="add_bbox" class="btn btn-primary mb-2">Add Bounding Box</button>
+            <div id="bbox_output" class="border p-2" style="height: 200px; overflow-y: auto;"></div>
+          </div>
+          <div class="col-12 col-lg-8">
+            <canvas id="canvas" class="img-fluid"></canvas>
+            <div id="coordinates_display" class="mt-2"></div>
+            <div id="patch_index_display"></div>
+          </div>
         </div>
-        <div class="mb-3">
-          <label for="phrase-input" class="form-label">Phrase:</label>
-          <input type="text" id="phrase-input" class="form-control" value="">
-        </div>
-        <div class="mb-3">
-          <label for="image-input" class="form-label">Upload Image:</label>
-          <input type="file" id="image-input" class="form-control" accept="image/*" />
-        </div>
-        <button id="add_bbox" class="btn btn-primary mb-2">Add Bounding Box</button>
-        <div id="bbox_output" class="border p-2" style="height: 200px; overflow-y: auto;"></div>
-      </div>
-      <div class="col-12 col-lg-8">
-        <canvas id="canvas" class="img-fluid"></canvas>
-        <div id="coordinates_display" class="mt-2"></div>
-        <div id="patch_index_display"></div>
-      </div>
-    </div>
+        <!-- You could add additional unique content here -->
+      </article>
+    </main>
+    <aside>
+      <!-- You could add complementary information or widgets here -->
+    </aside>
+    <footer>
+      <!-- Add footer links or information here -->
+    </footer>
   </div>
   <script src="script.js"></script>
 </body>

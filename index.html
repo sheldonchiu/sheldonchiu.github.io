@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Draw Bounding Box</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+</head>
+<body>
+  <div class="container mt-3">
+    <h1>Prmopt Tool For <a href="https://github.com/microsoft/unilm/tree/master/kosmos-2" target="_blank" rel="noopener noreferrer">Kosmos 2</a></h1>
+    <div class="row">
+      <div class="col-12 col-lg-4">
+        <div class="mb-3">
+          <label for="p-input" class="form-label">P (Keep default is fine):</label>
+          <input type="number" id="p-input" class="form-control" value="32">
+        </div>
+        <div class="mb-3">
+          <label for="phrase-input" class="form-label">Phrase:</label>
+          <input type="text" id="phrase-input" class="form-control" value="">
+        </div>
+        <div class="mb-3">
+          <label for="image-input" class="form-label">Upload Image:</label>
+          <input type="file" id="image-input" class="form-control" accept="image/*" />
+        </div>
+        <button id="add_bbox" class="btn btn-primary mb-2">Add Bounding Box</button>
+        <div id="bbox_output" class="border p-2" style="height: 200px; overflow-y: auto;"></div>
+      </div>
+      <div class="col-12 col-lg-8">
+        <canvas id="canvas" class="img-fluid"></canvas>
+        <div id="coordinates_display" class="mt-2"></div>
+        <div id="patch_index_display"></div>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
